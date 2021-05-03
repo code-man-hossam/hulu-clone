@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import './config';
+@import './genre';
+@import './movies';
+
+body {
+  background-color: $color-primary;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+// -----------NAV SECTION START-----
+
+.nav {
+  width: 100vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  &__icons {
+    height: auto;
+    @include flex(space-between);
+    padding: 1rem;
+
+    & .nav__btn {
+      @include button;
+      width: 3rem;
+
+      & svg {
+        font-size: 2rem;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      & span {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        text-align: center;
+        opacity: 0;
+      }
+      &:hover > span {
+        opacity: 1;
+      }
+
+      &:hover > svg {
+        animation: bounce 1.5s infinite;
+      }
+    }
+  }
+
+  &__logo {
+    & .logo__img {
+      width: 100%;
+      @include flex(center);
+
+      & img {
+        width: 10rem;
+      }
+    }
+  }
+}
+
+@include media-md {
+  .nav__icons {
+    padding: 2rem;
+
+    & .nav__btn {
+      width: auto;
+      & svg {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .nav__logo {
+    & .logo__img {
+      margin-top: 1rem;
+      justify-content: flex-end;
+
+      & img {
+        width: 11rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+// -----------NAV SECTION END-------

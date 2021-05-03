@@ -1,0 +1,39 @@
+.movies {
+  width: 100vw;
+  height: auto;
+
+  &__btns {
+    width: 100%;
+    overflow-x: scroll;
+
+    & .movies__scroll {
+      width: 340vw;
+      padding: 1rem 2rem;
+      @include flex(space-between);
+
+      & button {
+        @include button;
+        font-size: 1.2rem;
+        transition: 200ms;
+
+        &:hover {
+          transform: scale(1.3);
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@include media-md {
+  .movies {
+    &__btns {
+      overflow-x: initial;
+
+      & .movies__scroll {
+        width: 100vw;
+        padding-left: 3rem;
+      }
+    }
+  }
+}

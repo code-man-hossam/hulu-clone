@@ -1,0 +1,28 @@
+$color-primary: #1c1c2b;
+$color-white: #d9d4e7;
+
+@mixin button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: $color-white;
+}
+
+@mixin flex($justify) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+
+@mixin media-md {
+  @media screen and (min-width: 764px) {
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
