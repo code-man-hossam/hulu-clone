@@ -1,12 +1,12 @@
 import './sass/main.scss'
-import Genre from './components/Genre'
+import MovieSelection from './components/MovieSelection'
 import Nav from './components/Nav'
 
 function App() {
   return (
     <>
       <Nav />
-      <Genre />
+      <MovieSelection />
     </>
   )
 }

@@ -24,10 +24,12 @@ body {
 
     & .nav__btn {
       @include button;
-      width: 3rem;
+      @include flex(center);
+      flex-direction: column;
 
       & svg {
         font-size: 2rem;
+        display: block;
       }
 
       @keyframes bounce {

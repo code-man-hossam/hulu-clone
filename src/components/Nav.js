@@ -3,7 +3,6 @@ import '../sass/main.scss'
 import { AiOutlineHome, AiOutlineThunderbolt } from 'react-icons/ai'
 import { HiOutlineBadgeCheck } from 'react-icons/hi'
 import { TiFolderOpen } from 'react-icons/ti'
-import { BiSearchAlt2 } from 'react-icons/bi'
 import { RiUserLine } from 'react-icons/ri'
 
 const Nav = () => {
@@ -25,10 +24,6 @@ const Nav = () => {
         <button className='nav__btn'>
           <TiFolderOpen />
           <span>COLLECTIONS</span>
-        </button>
-        <button className='nav__btn'>
-          <BiSearchAlt2 />
-          <span>SEARCH</span>
         </button>
         <button className='nav__btn'>
           <RiUserLine />
